@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <button id="darkToggle">Toggle Dark Mode</button>
+    <h1>Plant Image Classifier</h1>
+    
+    <div id="auth-section">
+      <form id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p>No account? <a href="#" onclick="showRegister()">Register</a></p>
+      </form>
+
+      <form id="register-form" style="display: none;">
+        <h2>Register</h2>
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="password" id="register-password" placeholder="Password" required />
+        <button type="submit">Register</button>
+        <p>Have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </form>
+    </div>
+
+    <div id="app" style="display:none;">
+      <h2>Upload Image for Classification</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <button onclick="classifyImage()">Check Image</button>
+      <div id="result"></div>
+      
+      <!-- Logout Button -->
+      <button onclick="logout()" style="margin-top: 20px;">Logout</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

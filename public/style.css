@@ -1,0 +1,149 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f9f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #388e3c;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 5px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #66bb6a;
+  box-shadow: 0 0 5px #a5d6a7;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e53935;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #c62828;
+}
+
+/* Links */
+a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Result Box */
+#result {
+  margin-top: 20px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #a5d6a7;
+}
+
+/* Auth and App section transitions */
+#auth-section,
+#app {
+  transition: opacity 0.3s ease;
+}
+
+:root {
+  --bg-light: #f4f9f4;
+  --text-light: #333;
+  --primary: #2e7d32;
+  --accent: #e53935;
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --primary-dark: #81c784;
+  --accent-dark: #ef5350;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .container {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input,
+body.dark-mode button {
+  background-color: #333;
+  color: var(--text-dark);
+  border: 1px solid #555;
+}
+
+body.dark-mode a {
+  color: var(--primary-dark);
+}
+
+#darkToggle {
+  margin-top: 10px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark-mode #darkToggle {
+  background-color: var(--primary-dark);
+}

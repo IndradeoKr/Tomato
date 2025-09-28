@@ -1,0 +1,15 @@
+# Node modules (dependencies)
+node_modules/
+
+# Uploads directory (usually contains user data)
+uploads/
+
+# Model files (can be large/binary and generated)
+model.h5
+
+# Environment files (if any)
+.env
+
+# OS-specific or editor-specific files
+.DS_Store
+.vscode/
